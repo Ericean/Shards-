@@ -35,7 +35,7 @@ void parse(vector<string>& blk){
 		times = stoi(t);
 		times = times -(times/inversions)*inversions;
 		orig_msg.resize(num,' ');
-		cout <<"Inversions: "<< inversions <<" be about to encrypt orig_msg: "<< orig_msg << " with size:  "<<orig_msg.size()<<"for "<<  times <<" times\n";
+		//cout <<"Inversions: "<< inversions <<" be about to encrypt orig_msg: "<< orig_msg << " with size:  "<<orig_msg.size()<<"for "<<  times <<" times\n";
 		string cipher_msg(num,' ');
 		for(int i= 0; i< times; ++i){
 			for(int j=0; j<num ; ++j){
@@ -45,6 +45,7 @@ void parse(vector<string>& blk){
 		}
 		cout << orig_msg <<endl;
 	}
+	key.clear();
 }
 
 int main()
